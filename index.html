@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/itemsfont.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+   <title>Weather</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="preload">
+         <div class="dots-bars-1 _active"></div>
+      </div>
+      <header class="header">
+         <div class="header__container">
+            <div class="header__body">
+               <div class="update _icon_arrow"><span></span></div>
+               <div class="languages _icon_arrow-bottom">
+                  <div class="languages__text"></div>
+                  <form class="languages__radio">
+                     <div class="languages__EN">
+                        <label for="EN" class="radio-language__label">EN</label>
+                        <input type="radio" id="EN" class="radio-language__radio" value="EN" name="lang" checked>
+                     </div>
+                     <div class="languages__RU">
+                        <label for="RU" class="radio-language__label">RU</label>
+                        <input type="radio" id="RU" class="radio-language__radio" value="RU" name="lang" disabled>
+                     </div>
+                  </form>
+               </div>
+               <div>
+                  <div class="temperature">
+                     <div class="temperature__faring">
+                        <input id="c_1" class="checkbox__input faring" type="radio" value="F" name="temp">
+                        <label for="c_1" class="checkbox__label c_1"> &degF</label>
+                     </div>
+                     <div class="temperature__cels">
+                        <input id="c_2" class="checkbox__input celsiy" type="radio" value="C" name="temp" checked>
+                        <label for="c_2" class="checkbox__label c_2">&degC</label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="search">
+               <form id="search" role="search" method="get" class="search__form"><input type="search"
+                     placeholder="Search city or ZIP" class="search__input"><span class="microfon _icon_micro"></span>
+                  <button type="submit" class="search__button">Search</button>
+               </form>
+            </div>
+         </div>
+      </header>
+      <main class="main">
+         <div class="main__container">
+            <div class="main__citi-data">
+               <h1 class="main__title"><span class="citi-name"></span>, <span class="country-name"></span></h1>
+               <div class="main__data">
+                  <span class="data-dey"></span>
+                  <span class="data-time"></span>
+               </div>
+            </div>
+            <div class="main__columns">
+               <section class="column">
+                  <div class="column__pogoda">
+                     <div class="column__temp"><span class="temp imperial-num">10</span><span>&deg</span>
+                        <div class="pogoda-picture"></div>
+                     </div>
+                  </div>
+                  <div class="column__list-temp">
+                     <ul>
+                        <li><span>Overcast
+                              Feels like:</span> <span class="overcast"></span></li>
+                        <li><span>Wind:</span> <span class="wind"></span></li>
+                        <li><span>Humidity:</span> <span class="humidity"></span></li>
+                     </ul>
+                  </div>
+                  <div class="column__weather-deys">
+                     <div class="days">
+                        <div class="days__week days__week_two">Tuesday</div>
+                        <div class="days__temperature days__temperature_two">
+                           <div class="days__text-temp-two"><span class="temp-two imperial-num"></span><span>&deg</span>
+                           </div>
+                           <div class="icon-weather-two icon-weather"></div>
+                        </div>
+                     </div>
+                     <div class="days">
+                        <div class="days__week days__week_three">Tuesday</div>
+                        <div class="days__temperature days__temperature_three">
+                           <div class="days__text-temp-three"> <span
+                                 class="temp-three imperial-num"></span><span>&deg</span></div>
+                           <div class="icon-weather-three icon-weather"></div>
+                        </div>
+                     </div>
+                     <div class="days">
+                        <div class="days__week days__week_four">Tuesday</div>
+                        <div class="days__temperature days__temperature_four">
+                           <div class="days__text-temp-four"><span
+                                 class="temp-four imperial-num"></span><span>&deg</span></div>
+                           <div class="icon-weather-four icon-weather"></div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="column column_rows">
+                  <!-- <div id="map" class="column__map"></div> -->
+                  <div class="column__coordinats">
+                     <div class="latitude"> <span>Latitude:</span> <span class="lat"></span></div>
+                     <div class="longitude"> <span>longitude:</span> <span class="lon"></span></div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </main>
+   </div>
+   <script src="./js/script.js"></script>
+   <script src="./js/googleSpeech.js"></script>
+   <script src="./js/serch.js"></script>
+   <script src="./js/data_time.js"></script>
+   <script src="./js/API.js"></script>
+   <script src="./js/map.js"></script>
+</body>
+
+</html>
