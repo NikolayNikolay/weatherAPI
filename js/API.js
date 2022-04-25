@@ -143,7 +143,7 @@ function searchCity(event) {
          });
       // ============смена картинки рандомно=============================================================================
       let img = Math.round(Math.random() * (3 - 1) + 1);
-      document.body.style.background = `linear-gradient(180deg, rgba(8, 15, 26, 0.59) 0%, rgba(17, 17, 46, 0.46) 100%),url('../img/images${img}.jpg') 50% / cover no-repeat`
+      document.body.style.background = `linear-gradient(180deg, rgba(8, 15, 26, 0.59) 0%, rgba(17, 17, 46, 0.46) 100%),url('./img/images${img}.jpg') 50% / cover no-repeat`
       // ==============очищение инпута==================================================================
       searchInput.value = '';
    }
